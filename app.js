@@ -7,7 +7,7 @@ $(document).ready(() => {
 })
 
 function getMovies(search) {
-    axios.get('http://www.omdbapi.com/?&apikey=f2905585&s=star wars ' + search)
+    axios.get('https://www.omdbapi.com/?&apikey=f2905585&s=star wars ' + search)
     .then((response) => {
         console.log(response)
     })
