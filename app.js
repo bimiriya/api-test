@@ -7,11 +7,11 @@ $(document).ready(() => {
 })
 
 function getMovies(search) {
-    axios.get('https://www.omdbapi.com/?&apikey=f2905585&s=star wars ' + search)
-    .then((response) => {
-        console.log(response)
-    })
-    .catch((err) => {
-        console.log(err)
-    })
+    $.ajax({
+        url: 'https://www.omdbapi.com/?&apikey=f2905585&s=star wars ' + search,
+        dataType: 'jsonp',
+        success: function(results){
+            console.log(results);
+        }
+    });
 }
